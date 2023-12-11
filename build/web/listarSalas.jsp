@@ -59,6 +59,7 @@
             <th>ID</th>
             <th>Dia da Semana</th>
             <th>Horário</th>
+            <th>Período</th>
             <th>Nome do Professor</th>
             <th>Nome da Disciplina</th>
             <th>Turno</th>
@@ -81,6 +82,7 @@
                     int id = resultSet.getInt("id");
                     String diaDaSemana = resultSet.getString("dia_da_semana");
                     String horario = resultSet.getString("horario");
+                    String periodo = resultSet.getString("periodo");
                     String nomeDoProfessor = resultSet.getString("nome_do_professor");
                     String nomeDaDisciplina = resultSet.getString("nome_da_disciplina");
                     String turno = resultSet.getString("turno");
@@ -90,6 +92,7 @@
             <td><%= id %></td>
             <td><%= diaDaSemana %></td>
             <td><%= horario %></td>
+            <td><%= periodo %></td>
             <td><%= nomeDoProfessor %></td>
             <td><%= nomeDaDisciplina %></td>
             <td><%= turno %></td>

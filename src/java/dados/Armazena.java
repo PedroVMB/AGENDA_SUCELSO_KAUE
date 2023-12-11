@@ -14,6 +14,15 @@ public class Armazena {
     private String nome_do_professor;
     private String nome_da_disciplina;
     private String turno;
+    private String periodo;
+
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
 
     public String getDia_da_semana() {
         return dia_da_semana;

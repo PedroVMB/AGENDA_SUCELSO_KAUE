@@ -86,6 +86,7 @@
             // Obtém os parâmetros do formulário
             String jspDiaDaSemana = request.getParameter("diaDaSemana");
             String jspHorario = request.getParameter("horario");
+            String jspPeriodo = request.getParameter("periodo");
             String jspNomeDoProfessor = request.getParameter("nomeDoProfessor");
             String jspNomeDaDisciplina = request.getParameter("nomeDaDisciplina");
             String jspTurno = request.getParameter("turno");
@@ -94,6 +95,7 @@
             Armazena arm = new Armazena();
             arm.setDia_da_semana(jspDiaDaSemana);
             arm.setHorario(jspHorario);
+            arm.setPeriodo(jspPeriodo);
             arm.setNome_do_professor(jspNomeDoProfessor);
             arm.setNome_da_disciplina(jspNomeDaDisciplina);
             arm.setTurno(jspTurno);
@@ -115,6 +117,9 @@
 
         <label for="horario">Horário:</label>
         <input type="text" name="horario" required><br>
+        
+        <label for="horario">Período:</label>
+        <input type="text" name="periodo" required><br>
 
         <label for="nomeDoProfessor">Nome do Professor:</label>
         <input type="text" name="nomeDoProfessor" required><br>

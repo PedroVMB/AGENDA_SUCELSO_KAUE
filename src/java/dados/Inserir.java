@@ -14,8 +14,8 @@ public class Inserir {
         PreparedStatement pstm = null;
         Connection conn = null;
 
-        String sql = "Insert into sala(dia_da_semana, horario, nome_do_professor, nome_da_disciplina, turno)" +
-                "values(?,?,?,?,?)";
+        String sql = "Insert into sala(dia_da_semana, horario, periodo, nome_do_professor, nome_da_disciplina, turno)" +
+                "values(?,?,?,?,?, ?)";
 
         try {
             conn = (Connection) Conexao.getConnection();
@@ -24,9 +24,11 @@ public class Inserir {
             // Use os métodos get do objeto Armazena para obter os valores
             pstm.setString(1, arm.getDia_da_semana());
             pstm.setString(2, arm.getHorario());
-            pstm.setString(3, arm.getNome_do_professor());
-            pstm.setString(4, arm.getNome_da_disciplina());
-            pstm.setString(5, arm.getTurno());
+            pstm.setString(3, arm.getPeriodo());
+            pstm.setString(4, arm.getNome_do_professor());
+            pstm.setString(5, arm.getNome_da_disciplina());
+            pstm.setString(6, arm.getTurno());
+            
 
             pstm.execute();
 
